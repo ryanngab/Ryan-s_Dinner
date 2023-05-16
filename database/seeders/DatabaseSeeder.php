@@ -23,54 +23,71 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+
+        \App\Models\User::Create([
+
+            'name' => 'Ryan',
+            'email' => 'firdausriyan402@gmail.com',
+            'phone' => '0859102724182',
+            'address' => 'desa pandansari ',
+            'city' => 'kabupaten bogor',
+            'province' => 'jawa barat',
+            'zip_code' => '16720',
+            'password' => bcrypt('12007948'),
+            'role' => 'Admin',
+            'Admin' => '1',
+
+        ]);
+
+
+
+
+
        \App\Models\Product::create([
+        'id_product' => 1,
         "name" => " Cilok",
         "price" => "120000",
+        'stok' => 5,
         "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
        ]);
        \App\Models\Product::create([
+        'id_product' => 2,
         "name" => "Mie Ayam",
         "price" => "120000",
+        'stok' => 5,
         "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
        ]);
        \App\Models\Product::create([
+        'id_product' => 3,
         "name" => "Batagoreng",
         "price" => "120000",
+        'stok' => 5,
         "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
        ]);
        \App\Models\Product::create([
-        "name" => "Seblak",
+        'id_product' => 4,
+        "name" => "Gorengan",
         "price" => "120000",
+        'stok' => 5,
         "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
        ]);
        \App\Models\Product::create([
-        "name" => "baso",
+        'id_product' => 5,
+        "name" => "Mie gebet",
         "price" => "120000",
-        "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
+        "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!",
+        'stok' => 5
+
        ]);
        \App\Models\Product::create([
-        "name" => "baso2",
+        'id_product' => 6,
+        "name" => "Bubur Ayam",
         "price" => "120000",
+        'stok' => 5,
         "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
        ]);
 
-       \App\Models\Product::create([
-        "name" => "Teh Tarik",
-        "price" => "120000",
-        "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
-       ]);
 
-       \App\Models\Product::create([
-        "name" => "Oreo",
-        "price" => "120000",
-        "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
-       ]);
-
-       \App\Models\Product::create([
-        "name" => "Mie Gebet",
-        "price" => "120000",
-        "description" => "Lorem ipsum dolor sit amet consectetur ellendus dolores vero sapiente!"
-       ]);
 
 
         //Added Start

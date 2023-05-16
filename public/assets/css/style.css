@@ -13,6 +13,12 @@ body {
     height: 100%;
 }
 
+h1,
+h2 {
+  font-family: 'Dancing Script', cursive;
+}
+
+
 body {
     background: #ffffff;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;

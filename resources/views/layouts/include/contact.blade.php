@@ -60,17 +60,17 @@
                             <input type="text" placeholder="Your Name" id="name" name="name"
                                 class="form-control" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label for="phone_number"></label>
                             <input type="number" placeholder="Phone Number" id="phone_number" name="phone_number"
                                 class="form-control" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label for="email"></label>
                             <input type="email" placeholder="Your Email" id="email" name="email"
                                 class="form-control" required>
                         </div>
-                        <div class="form-group mt-4">
+                        <div class="form-group mt-2">
                             <select class="form-control nice-select wide">
                                 <option value="" disabled selected>How many persons?</option>
                                 <option value="">1</option>
@@ -79,7 +79,7 @@
                                 <option value="">4</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label for="kapan"></label>
                             <input type="date" id="kapan" name="kapan" class="form-control" required>
                         </div>

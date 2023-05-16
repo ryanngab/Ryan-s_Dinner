@@ -25,10 +25,10 @@
             <div class="col-lg-12 col-sm-12 col-12">
                 <div class="dropdown">
 
-                    <button type="button" class="btn btn-warning mt-4" data-toggle="dropdown">
+                    {{-- <button type="button" class="btn btn-warning mt-4" data-toggle="dropdown">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span
                             class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
-                    </button>
+                    </button> --}}
 
 
 

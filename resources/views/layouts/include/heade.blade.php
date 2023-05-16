@@ -30,12 +30,19 @@
                 <a href="/user-profile" class="user_link">
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </a>
-\                <form class="form-inline">
+                \ <form class="form-inline">
                     <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                         <i class="fa fa-search" style="color:#ffff" aria-hidden="true"></i>
                     </button>
                 </form>
-                <a href="" class="btn btn-outline-warning"> Order Online</a>
+                @if (auth()->check())
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-warning">Logout</button>
+                    </form>
+                @else
+                    <a href="/login" class="btn btn-outline-warning">Login</a>
+                @endif
             </div>
         </div>
     </div>

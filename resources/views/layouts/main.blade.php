@@ -9,15 +9,36 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="/css/style.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>
 
-    @include('layouts\heade')
 
     <section >
         @yield('section')
     </section>
+
+     <script type="text/javascript">
+
+        function contoh() {
+
+           swal({
+
+                title: "Berhasil!",
+
+                text: "Pop-up berhasil ditampilkan",
+
+                icon: "success",
+
+                button: true
+
+            });
+
+        }
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

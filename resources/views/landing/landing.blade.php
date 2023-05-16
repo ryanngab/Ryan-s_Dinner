@@ -9,6 +9,7 @@
     {{-- end hero --}}
 
     {{-- Awal Jumbtron --}}
+
     @include('layouts.include.jumbuttron')
     {{-- End jumbtron --}}
 
