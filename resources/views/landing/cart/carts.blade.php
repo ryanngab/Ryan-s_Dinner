@@ -30,7 +30,7 @@
                     </div>
                 </td>
                 <td data-th="Price">RP. {{ $details['price'] }}</td>
-               
+
                 <td data-th="Quantity">
                     <input type="text" value="{{ $details['quantity'] }}" class="form-control"
                         min="1" name="total_pesanan[]" readonly/>
@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <td colspan="5" class="text-right">
-                    <a href="{{ url('/orders') }}" class="btn btn-danger"> <i class="fa fa-arrow-left"></i> Continue
+                    <a href="{{ url('/') }}" class="btn btn-danger"> <i class="fa fa-arrow-left"></i> Continue
                         Shopping</a>
                     <button class="btn btn-success mt-2"><i class="fa fa-money"></i>Checkout</button>
                 </td>
@@ -68,15 +68,15 @@
 <script type="text/javascript">
    $(".cart_update").change(function (e) {
         e.preventDefault();
-  
+
         var ele = $(this);
-  
+
         $.ajax({
             url: '{{ route('update_cart') }}',
             method: "patch",
             data: {
-                _token: '{{ csrf_token() }}', 
-                id: ele.parents("tr").attr("data-id"), 
+                _token: '{{ csrf_token() }}',
+                id: ele.parents("tr").attr("data-id"),
                 quantity: ele.parents("tr").find(".quantity").val()
             },
             success: function (response) {
@@ -86,15 +86,15 @@
     });
     $(".cart_remove").click(function (e) {
         e.preventDefault();
-  
+
         var ele = $(this);
-  
+
         if(confirm("Do you really want to remove?")) {
             $.ajax({
                 url: '{{ route('remove_from_cart') }}',
                 method: "DELETE",
                 data: {
-                    _token: '{{ csrf_token() }}', 
+                    _token: '{{ csrf_token() }}',
                     id: ele.parents("tr").attr("data-id")
                 },
                 success: function (response) {

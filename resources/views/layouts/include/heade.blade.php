@@ -30,7 +30,7 @@
                 <a href="/user-profile" class="user_link">
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </a>
-                \ <form class="form-inline">
+                 <form class="form-inline">
                     <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                         <i class="fa fa-search" style="color:#ffff" aria-hidden="true"></i>
                     </button>

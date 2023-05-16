@@ -76,11 +76,11 @@ class ProductController extends Controller
 
 
     public function checkout(Request $request){
-       
+
         $id_product = $request->id_product;
         $total_pesanan = $request->total_pesanan;
         $totalPrice = $request->totalPrice;
- 
+
             for($i=0;$i<count((array)$id_product);$i++){
                 Order::create([
                     'id_product' => $id_product[$i],
@@ -88,23 +88,23 @@ class ProductController extends Controller
                     'totalPrice' => $totalPrice[$i]
                 ]);
 
-                $product = Product::where('id_product','=',$id_product)->first();
-                $total = $product->array['stok']-$total_pesanan[$i];
-                $product->update([
-                    'stok' => $total[$i],
-                ]);
-            }
-         
 
-       
+            $product = Product::where('id_product', '=', $id_product[$i])->first();
+            $total = $product->stok - $total_pesanan[$i];
+            $product->update([
+            'stok' => $total]);
+            }
+
+
+
         // $item = new Product();
         // $total = ($item->stok - $request->total_pesanan);
         // // $item->where('id_product', '=', $request->id_product)->decrement('stok', $request->total_pesanan);
         // Product::where('id_product','=',$id_product)->update(['stok'=>$total]);
 
         $request->session()->forget('cart');
-        
-        return redirect('/orders')->with('success', 'Product orders successfully!');
+
+        return redirect('/')->with('success', 'Product orders successfully!');
 
 }
 }
